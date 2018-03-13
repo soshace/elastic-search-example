@@ -1,0 +1,21 @@
+{
+  "name": "es-postgres-server",
+  "version": "1.0.0",
+  "description": "Simple server with ES search through postgresql db.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stepan Zharychev",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.5.0",
+    "koa-logger": "^3.1.0",
+    "koa-router": "^7.4.0",
+    "koa-send": "^4.1.3",
+    "koa2-cors": "^2.0.5",
+    "pgtools": "^0.3.0",
+    "sequelize": "^4.36.0",
+    "sequelize-es-decorator": "^1.0.3"
+  }
+}

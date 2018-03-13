@@ -1,0 +1,9 @@
+.search-bar {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.search-bar button {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}

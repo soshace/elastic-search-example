@@ -1,0 +1,46 @@
+<section>
+  <div class="container">
+    <div class="search-bar">
+      <div class="row">
+        <div class="col-lg-6">
+          <form (submit)="executeSearch()">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for..." [(ngModel)]="searchQuery" [ngModelOptions]="{standalone: true}"/>
+              <span class="input-group-btn">
+              <button class="btn btn-secondary" type="submit">Go!</button>
+            </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Account Name</th>
+        <th>Phone</th>
+        <th>City</th>
+        <th>Country</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Secondary Address</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+      </tr>
+      <tr
+        *ngFor="let customer of customers | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage, totalItems: totalCount }">
+        <td>{{customer['id']}}</td>
+        <td>{{customer['account_name']}}</td>
+        <td>{{customer['phone']}}</td>
+        <td>{{customer['city']}}</td>
+        <td>{{customer['country']}}</td>
+        <td>{{customer['email']}}</td>
+        <td>{{customer['address']}}</td>
+        <td>{{customer['secondary_address']}}</td>
+        <td>{{customer['firstname']}}</td>
+        <td>{{customer['lastname']}}</td>
+      </tr>
+    </table>
+    <pagination-controls (pageChange)="switchPage($event)" class="custom-pagination"></pagination-controls>
+  </div>
+</section>
