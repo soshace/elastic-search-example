@@ -11,6 +11,13 @@ Example of elastic search integration. Based on Node.js + Koa and Angular 5 on F
   ``` bash
   npm install
   ```
+- In **server** folder run in the following order:
+  ``` bash
+  node database/scripts/initDb.js
+  node database/scripts/initTables.js
+  node database/scripts/setData.js
+  ```
+  Don't forget that you can customize those scripts for your own needs (setData especially, probably you want to decrease number of entries).
 
 ## Start
 - Run in **client** folder:
